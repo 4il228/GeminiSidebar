@@ -25,6 +25,41 @@ html, body {
   overflow: hidden;
 }
 
+/* Информационное сообщение — показывается, если пользователь уже на Gemini */
+.info-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  text-align: center;
+  color: #5f6368;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.info-message.hidden {
+  display: none;
+}
+.info-icon {
+  width: 48px;
+  height: 48px;
+  fill: #9aa0a6;
+  margin-bottom: 16px;
+}
+.info-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3c4043;
+  margin: 0 0 8px 0;
+}
+.info-description {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 280px;
+}
+
 /* Iframe Gemini — полный охват родителя */
 #gemini-frame {
   width: 100%;

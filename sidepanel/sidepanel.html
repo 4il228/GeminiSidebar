@@ -6,6 +6,13 @@
 </head>
 <body>
   <div class="panel-container">
+    <div id="info-message" class="info-message hidden">
+      <svg class="info-icon" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+      </svg>
+      <p class="info-title">Вы уже на Gemini</p>
+      <p class="info-description">Боковая панель недоступна, когда активная вкладка открыта на gemini.google.com. Переключитесь на другую вкладку, чтобы использовать расширение.</p>
+    </div>
     <iframe id="gemini-frame" src="https://gemini.google.com/app" allow="clipboard-read; clipboard-write"></iframe>
     
     <button id="capture-btn" title="Вставить экран (Alt+G)">

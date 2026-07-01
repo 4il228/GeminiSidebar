@@ -1,3 +1,17 @@
+async function checkActiveTab() {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  if (!tab) return;
+
+  const isOnGemini = tab.url && tab.url.startsWith("https://gemini.google.com");
+
+  document.getElementById('info-message').classList.toggle('hidden', !isOnGemini);
+  document.getElementById('gemini-frame').style.display = isOnGemini ? 'none' : '';
+  document.getElementById('capture-btn').style.display = isOnGemini ? 'none' : '';
+}
+
+document.addEventListener('DOMContentLoaded', checkActiveTab);
+chrome.tabs.onActivated.addListener(checkActiveTab);
+
 document.getElementById('capture-btn').addEventListener('click', async () => {
   const btn = document.getElementById('capture-btn');
   btn.classList.add('loading');
