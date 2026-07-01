@@ -1,4 +1,4 @@
-# AI Assistant SidePanel
+# Gemini Sidepanel extension
 
 > Chrome-расширение, интегрирующее Google Gemini в нативную боковую панель браузера с возможностью мгновенного скриншота любой вкладки.
 
